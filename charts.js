@@ -91,7 +91,8 @@ function buildCharts(sample) {
       y: yticks,
       type: 'bar',
       text: otuLabels.slice(0,10),
-      orientation: 'h'
+      orientation: 'h',
+      hovermode: "closest"
     }];
     // 9. Create the layout for the bar chart. 
     var barLayout = {
@@ -116,7 +117,9 @@ function buildCharts(sample) {
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-      title: 'Bactria Cultures Per Sample'
+      title: 'Bactria Cultures Per Sample',
+      hovermode: "closest",
+      automargin: true
     };
 
     // 3. Use Plotly to plot the data with the layout.
@@ -134,7 +137,7 @@ function buildCharts(sample) {
        steps: [
          {range: [0, 2], color: 'red'},
          {range: [2, 4], color: 'orange'},
-         {range: [4, 6], color: 'yellow'},
+         {range: [4, 6], color: 'gold'},
          {range: [6, 8], color: 'lightgreen'},
          {range: [8, 10], color: 'darkgreen'},
        ]
@@ -143,7 +146,8 @@ function buildCharts(sample) {
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-     title: 'Belly Button Washing Frequency'
+     title: 'Belly Button Washing Frequency',
+     automargin: true
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
